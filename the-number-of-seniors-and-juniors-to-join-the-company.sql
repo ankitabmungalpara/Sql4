@@ -74,6 +74,7 @@ hires_s as (
             where 
                 cum_salary <= 70000
             ),
+  
 remain_budget as (
     select 70000 - coalesce((
                                 select 
@@ -89,6 +90,7 @@ remain_budget as (
                                 0
                             ) as budget
 ),
+  
 hires_j as (
             select 
                 count(*) as total_j 
